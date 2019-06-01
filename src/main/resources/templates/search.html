@@ -37,7 +37,11 @@
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
-
+    <div th:replace="fragments :: jobTable">
+    </div>
+    <div th:unless="${jobs} and ${jobs.size()}">
+        <h3>0 Result(s)</h3>
+    </div>
 </div>
 
 </body>
